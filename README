@@ -1,0 +1,28 @@
+The application is about Medical Bill upload service
+Language: Node
+Framework: Express
+
+I have created two API's,
+1) A GET endpoint at "/items" to return the list of medical bills stored in the in-memory store.
+2) A POST endpoint at "/items" to add a new medical bill to the in-memory store.
+
+To run the application, type "node app.js". The application will start on port 3000. 
+
+To test the application for POST API,
+1) Open postman application and type http://localhost:3000/items
+2) Select POST method
+3) Select body -> raw 
+4) Enter the details of patient, example
+    {
+    "patientName": "Jim B.",
+    "patientAddress": "12 N 74th St, NY USA",
+    "hospitalName": "NYC City Hospital",
+    "dateOfService": "2021-09-05",
+    "billAmount": 30
+    }
+5) A success message will be shown "Medical bill added successfully"
+
+To test the application for GET API,
+1) Open postman application and type http://localhost:3000/items
+2) Select GET method
+3) It will return all the medical bills which were entered using the POST method.
